@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lerato Leshilo-Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7/dist/ionicons/ionicons.js"></script>
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .icon-link {
+        transition: all 0.3s ease;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-decoration: none !important;
+        outline: none;
+      }
+      .icon-link:hover {
+        transform: scale(1.2);
+        opacity: 0.8;
+      }
+      .icon-link:focus {
+        outline: none;
+        text-decoration: none;
+      }
+      .icon-link span,
+      .icon-link ion-icon {
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+      .icon-link {
+        color: #222 !important;
+        background: #f7f7f7;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+      }
+      .icon-link:hover {
+        color: #111 !important;
+        background: #e9ecef;
+      }
+      .icon-link:active {
+        transform: scale(1.1);
+      }
+      .icon-svg {
+        font-size: 2em;
+      }
+      /* Ensure icons stay centered on all screen sizes */
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      .contact-info > div {
+        flex: 0 0 auto;
+      }
+      .contact-info > div {
+        flex: 0 0 auto;
+        margin-bottom: 0 !important;
+      }
+      /* Remove unwanted external pseudo elements or chain icons from global A styling */
+      .contact-info .icon-link::before,
+      .contact-info .icon-link::after,
+      .contact-info .icon-link i::before,
+      .contact-info .icon-link i::after {
+        content: none !important;
+        display: none !important;
+      }
+      .contact-info .icon-link i,
+      .contact-info .icon-link ion-icon {
+        font-size: 2em !important;
+        line-height: 1 !important;
+      }
+      .contact-info .icon-link {
+        text-decoration: none !important;
+      }
+      .floating-text {
+        opacity: 0.95;
+        font-weight: 600;
+        color: #1f2937;
+        margin: 1rem 0 0.5rem;
+        animation: floatText 6s ease-in-out infinite;
+      }
+      @keyframes floatText {
+        0%, 100% { transform: translateY(0); opacity: 1; }
+        50% { transform: translateY(-8px); opacity: 0.8; }
+      }
+
+      /* Contact Form Responsive Styles */
+      .contact-section .block-9 {
+        min-height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      }
+
+      .contact-section .block-9 .col-sm-6 {
+        min-height: 500px;
+        display: flex;
+        align-items: stretch;
+        flex: 1;
+        padding: 0;
+        min-width: 0;
+      }
+
+      /* Image column - appears first (left) */
+      .contact-section .block-9 .col-sm-6:not(.order-md-last) {
+        order: 1;
+      }
+
+      /* Form column - appears second (right) */
+      .contact-section .block-9 .order-md-last {
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, rgba(248, 249, 250, 0.95), rgba(233, 236, 239, 0.95));
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .contact-section .contact-form {
+        width: 100%;
+        max-width: none;
+        min-height: 100%;
+        height: 100%;
+        background: rgba(248, 249, 250, 0.95);
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contact-section .block-9 .img {
+        min-height: 100%;
+        height: 100%;
+      }
+
+      .contact-section .contact-form .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .contact-section .block-9 .img {
+        position: relative;
+        min-height: 500px;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        border-radius: 0;
+        box-shadow: none;
+        flex: 1;
+        width: 100%;
+      }
+
+      .contact-section .block-9 .img .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+        border-radius: 8px;
+      }
+
+      /* Responsive breakpoints */
+      @media (max-width: 767.98px) {
+        .contact-section .block-9 {
+          min-height: 500px;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+        }
+
+        .contact-section .block-9 .col-sm-6 {
+          min-height: 500px;
+          min-width: 50%;
+          max-width: 50%;
+          order: initial !important;
+          flex: 0 0 50%;
+        }
+
+        .contact-section .block-9 .col-sm-6:not(.order-md-last) {
+          order: 1;
+        }
+
+        .contact-section .block-9 .order-md-last {
+          order: 2;
+          padding: 1rem;
+        }
+
+        .contact-section .block-9 .img {
+          min-height: 500px;
+          margin-bottom: 0;
+        }
+
+        .contact-section .contact-form {
+          max-width: 100%;
+          margin: 0;
+          padding: 1.5rem;
+        }
+
+        .contact-section .contact-form .form-control,
+        .contact-section .contact-form textarea {
+          font-size: 0.9rem;
+          padding: 0.7rem 0.9rem;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .contact-section .block-9 {
+          min-height: 800px;
+          flex-direction: row;
+        }
+
+        .contact-section .block-9 .col-sm-6 {
+          min-height: 500px;
+          flex: 1;
+        }
+
+        .contact-section .block-9 .col-sm-6:not(.order-md-last) {
+          order: 1;
+        }
+
+        .contact-section .block-9 .order-md-last {
+          order: 2;
+        }
+
+        .contact-section .block-9 .img {
+          min-height: 500px;
+        }
+
+        .contact-section .contact-form {
+          padding: 2rem;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .contact-section .block-9 {
+          min-height: 900px;
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: row;
+        }
+
+        .contact-section .block-9 .col-sm-6 {
+          min-height: 600px;
+          flex: 1;
+        }
+
+        .contact-section .block-9 .col-sm-6:not(.order-md-last) {
+          order: 1;
+        }
+
+        .contact-section .block-9 .order-md-last {
+          order: 2;
+        }
+
+        .contact-section .block-9 .img {
+          min-height: 600px;
+          order: 1;
+        }
+
+        .contact-section .contact-form {
+          padding: 2.5rem;
+        }
+      }
+
+      /* Form elements responsive sizing */
+      .contact-section .form-control {
+        font-size: 16px;
+        padding: 12px 16px;
+        border: 2px solid #e9ecef;
+        border-radius: 6px;
+        transition: border-color 0.3s ease;
+      }
+
+      .contact-section .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+
+      .contact-section .btn-primary {
+        width: 100%;
+        padding: 6px 12px;
+        font-size: 10px;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-section .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+      }
+
+      /* Contact info responsive adjustments */
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 3rem;
+      }
+
+      .contact-info > div {
+        flex: 0 0 auto;
+        margin-bottom: 0 !important;
+      }
+
+      @media (max-width: 767.98px) {
+        .contact-info {
+          gap: 20px;
+          margin-bottom: 2rem;
+        }
+
+        .contact-info .icon-link {
+          width: 60px !important;
+          height: 60px !important;
+        }
+
+        .contact-info .icon-link .icon-svg {
+          font-size: 1.5em !important;
+        }
+      }
+
+      /* Prevent layout shifts during loading */
+      .contact-section .block-9 .img {
+        transition: none;
+      }
+
+      .contact-section .contact-form {
+        transition: none;
+      }
+
+      /* Skills Section Responsive Styles */
+      #skills-section {
+        padding: 6rem 0;
+      }
+
+      #skills-section .progress-wrap {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #skills-section .progress-wrap:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      #skills-section .progress-wrap h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      #skills-section .progress {
+        height: 12px;
+        background: #e9ecef;
+        border-radius: 6px;
+        overflow: visible;
+        position: relative;
+        margin-top: 2rem;
+      }
+
+      #skills-section .progress-bar {
+        background: linear-gradient(45deg, #ffbd39, #ff8c00);
+        border-radius: 6px;
+        position: relative;
+        transition: width 1.5s ease-in-out;
+        box-shadow: 0 2px 4px rgba(255, 189, 57, 0.3);
+        height: 100%;
+      }
+
+      #skills-section .progress-bar span {
+        position: absolute;
+        right: -12px;
+        top: -32px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #ffbd39;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 4px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 189, 57, 0.3);
+      }
+
+      /* Responsive breakpoints for skills section */
+      @media (max-width: 767.98px) {
+        #skills-section {
+          padding: 4rem 0;
+        }
+
+        #skills-section .progress-wrap {
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+          min-height: 100px;
+        }
+
+        #skills-section .progress-wrap h3 {
+          font-size: 16px;
+          margin-bottom: 1rem;
+        }
+
+        #skills-section .progress {
+          height: 10px;
+          margin-top: 1.8rem;
+        }
+
+        #skills-section .progress-bar span {
+          font-size: 12px;
+          padding: 3px 6px;
+          top: -28px;
+          right: -10px;
+        }
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        #skills-section .progress-wrap {
+          padding: 1.8rem;
+          min-height: 110px;
+        }
+
+        #skills-section .progress-wrap h3 {
+          font-size: 17px;
+          margin-bottom: 1.2rem;
+        }
+
+        #skills-section .progress {
+          margin-top: 1.9rem;
+        }
+
+        #skills-section .progress-bar span {
+          top: -30px;
+          right: -11px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        #skills-section .progress-wrap {
+          padding: 2.2rem;
+          min-height: 130px;
+        }
+
+        #skills-section .progress-wrap h3 {
+          font-size: 19px;
+          margin-bottom: 1.5rem;
+        }
+
+        #skills-section .progress {
+          margin-top: 2rem;
+        }
+
+        #skills-section .progress-bar span {
+          top: -32px;
+          right: -12px;
+        }
+      }
+
+      /* Grid layout adjustments */
+      #skills-section .row {
+        margin: 0 -15px;
+      }
+
+      #skills-section .col-md-6 {
+        padding: 0 15px;
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: 767.98px) {
+        #skills-section .col-md-6 {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      /* Animation improvements */
+      #skills-section .progress-bar {
+        animation: progressFill 2s ease-out;
+      }
+
+      @keyframes progressFill {
+        0% {
+          width: 0%;
+        }
+      }
+
+      /* Ensure consistent text alignment */
+      #skills-section .progress-wrap h3 {
+        text-transform: none;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Portfolio</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	      <div class="slider-item ">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid">
+				<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/1stoption.jpg);">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Lerato Leshilo</span></h1>
+			            <p><a href="mailto:leeleshilo@gmail.com" class="btn btn-primary py-3 px-4">Hire me</a> <a href="https://github.com/leeleshilo" class="btn btn-white btn-outline-white py-3 px-4">My work</a></p>
+		            </div>
+		          </div>
+	          	</div>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex">
+    					<div class="overlay"></div>
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+    				<div class="row justify-content-start pb-3">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<h1 class="big">About</h1>
+		            <h2 class="mb-4">About Me</h2>
+		            <p>BCom Business Management Graduate | Operations, Admin & Strategy Support | Aspiring Junior Business Analyst</p>
+		            <ul class="about-info mt-4 px-md-0 px-2">
+		            	<li class="d-flex"><span>Name:</span> <span>Lerato Leshilo</span></li>
+		            	<li class="d-flex"><span>Address:</span> <span>Pretoria, South Africa</span></li>
+		            	<li class="d-flex"><span>Email:</span> <span>leeleshilo@gmail.com</span></li>
+		            	<li class="d-flex"><span>Phone: </span> <span>+27723010005</span></li>
+		            </ul>
+		          </div>
+		        </div>
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+              	<p class="mb-4">
+					<span class="number" data-number="5">0</span>
+	                <span>Projects complete</span>
+                </p>
+                <p><a href="Lerato%20Leshilo%20CV.pdf" download="Lerato Leshilo CV.pdf" class="btn btn-primary py-3 px-3">Download CV</a></p>
+              </div>
+	          </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>A professional overthinker...of numbers.I turn spreadsheets into stories you actually want to read.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2022</span>
+    					<h2>National Senior Certificate </h2>
+    					<span class="position">Hoerskool Patriot</span>
+    					<p class="mt-4">Completed Matric</p>
+    				</div>
+    		
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2026</span>
+    					<h2>Bachelor of Commerce in Business Management</h2>
+    					<span class="position">University of Pretoria</span>
+    					<p class="mt-4">Completed degree with strong skills in business analysis, data interpretation, and strategic decision-making.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Present</span>
+    					<h2>Diploma in Data Analytics</h2>
+    					<span class="position">eLearningcollege.com</span>
+    					<p class="mt-4">Gaining hands-on skills in analyzing data, visualizing insights, and supporting business decisions.</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="Lerato%20Leshilo%20CV.pdf" download="Lerato Leshilo CV.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section" id="services-section">
+    	<div class="container">
+    		<div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Services</h1>
+            <h2 class="mb-4">Services</h2>
+            <p>Helping businesses turn data into actionable insights and smarter strategies.</p>
+          </div>
+        </div>
+    		<div class="row">
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<div class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Business Analysis & Strategy</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<div class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Data Analysis & Visualisation</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<div class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Process Improvement</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<div class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Financial analysis</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<div class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Reporting and KPI Tracking</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<div class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Decision Support & Insight</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+    	</div>
+    </section>
+
+		
+		<section class="ftco-section" id="skills-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">My Skills</h2>
+            <p>Crunching numbers, connecting dots, creating solutions.</p>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Problem solving</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							    <span>90%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Data Analysis & Insights</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="95"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:95%">
+							    <span>95%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Excel</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+							    <span>85%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Attention to Detail</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="90"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							    <span>90%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Administrative Support</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:95%">
+							    <span>95%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Research & Reporting</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="80"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
+							    <span>80%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Client Communication & Query Handling</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							    <span>90%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Power BI</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="70"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+							    <span>70%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>CRM Systems (HubSpot)</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="75"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
+							    <span>75%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>SQL (Basic queries)</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="60"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
+							    <span>60%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Creating Dashboards</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
+							    <span>80%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+ 
+
+	<section class="ftco-section ftco-project" id="projects-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>A showcase of projects delivering real-world solutions.</p>
+				</div>
+			</div>
+
+		<div class="row">
+
+  <div class="col-md-6">
+    <div class="project img d-flex justify-content-center align-items-center"
+         style="background-image: url(images/29cf3d41f716f6ca16ee137215b8986b.jpg);">
+      <div class="overlay"></div>
+      <div class="text text-center p-4">
+        <h3><a href="https://github.com/leeleshilo/MME-Events-Financial-Analysis">MME Events Financial Analysis</a></h3>
+        <span>Project 1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="project img d-flex justify-content-center align-items-center"
+         style="background-image: url(images/mission.jpg);">
+      <div class="overlay"></div>
+      <div class="text text-center p-4">
+        <h3><a href="https://github.com/leeleshilo/financial-survival-toolkit">Financial Survival Toolkit</a></h3>
+        <span>Project 2</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="project img d-flex justify-content-center align-items-center"
+         style="background-image: url(images/mining.png);">
+      <div class="overlay"></div>
+      <div class="text text-center p-4">
+        <h3><a href="https://github.com/leeleshilo/mining-equipment-maintenance-dashboard">Mining Equipment Dashboard</a></h3>
+        <span>Project 3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="project img d-flex justify-content-center align-items-center"
+         style="background-image: url(images/supppychain.png);">
+      <div class="overlay"></div>
+      <div class="text text-center p-4">
+        <h3><a href="https://leeleshilo.github.io/Lumi-Threads-supply-chain-analysis/">Lumi Threads Supply Chain Optimization</a></h3>
+        <span>Project 4</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="project img d-flex justify-content-center align-items-center"
+         style="background-image: url(images/aphrynebg4.png);">
+      <div class="overlay"></div>
+      <div class="text text-center p-4">
+        <h3><a href="https://leeleshilo.github.io/Aphryne-prototype/">Aphryne Prototype</a></h3>
+        <span>Project 5</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+	</section>
+    </section>
+
+
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>I'm <span>Available</span> for freelancing</h2>
+						<p class="mb-0"><a href="mailto:leeleshilo@gmail.com?subject=Hiring inquiry" class="btn btn-primary py-3 px-5" style="cursor:pointer;">Hire me</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+          </div>
+        </div>
+
+		<div class="row d-flex justify-content-center contact-info mb-5">
+          <div>
+            <a href="tel:0723010005" class="icon-link" aria-label="Call 0723010005">
+              <ion-icon name="call-outline" class="icon-svg"></ion-icon>
+            </a>
+          </div>
+          <div>
+            <a href="mailto:leeleshilo@gmail.com" class="icon-link" aria-label="Email leeleshilo@gmail.com">
+              <ion-icon name="mail-outline" class="icon-svg"></ion-icon>
+            </a>
+          </div>
+          <div>
+            <a href="https://wa.me/27723010005" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp 0723010005">
+              <ion-icon name="logo-whatsapp" class="icon-svg"></ion-icon>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/lerato-leshilo-b846a5298/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn profile">
+              <ion-icon name="logo-linkedin" class="icon-svg"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <div class="row no-gutters block-9">
+					<div class="col-sm-6 order-md-last d-flex">
+						<form id="contact-form" action="/.netlify/functions/sendContact" method="POST" class="bg-light p-4 p-md-5 contact-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+							<div class="form-group mt-3">
+								<div id="form-success" class="alert alert-success d-none" role="alert">Message sent — thank you!</div>
+								<div id="form-error" class="alert alert-danger d-none" role="alert">Failed to send message. Please try again later.</div>
+							</div>
+            </form>
+          
+          </div>
+
+					<div class="col-sm-6 d-flex align-items-stretch">
+						<div class="img" style="background-image: url(images/dreambig.jpg);">
+							<div class="overlay"></div>
+						</div>
+					</div>
+        </div>
+      </div>
+    </section>
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            </div>
+          </div>
+          
+           
+			<p class="text-start">
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+	<script src="js/main.js"></script>
+	<script>
+	(function(){
+		const NETLIFY_ENDPOINT = '/.netlify/functions/sendContact';
+		document.addEventListener('DOMContentLoaded', function(){
+			const form = document.getElementById('contact-form');
+			const successEl = document.getElementById('form-success');
+			const errorEl = document.getElementById('form-error');
+			if(!form) return;
+			function show(el, text){ if(!el) return; el.textContent = text || el.textContent; el.classList.remove('d-none'); }
+			function hide(el){ if(!el) return; el.classList.add('d-none'); }
+			form.addEventListener('submit', async function(e){
+				e.preventDefault();
+				hide(successEl); hide(errorEl);
+				
+				// Disable button and show loading state
+				const submitBtn = form.querySelector('input[type="submit"]');
+				const originalText = submitBtn.value;
+				submitBtn.value = 'Sending...';
+				submitBtn.disabled = true;
+				
+				const formData = new FormData(form);
+				const name = formData.get('name') || '';
+				const email = formData.get('email') || '';
+				const subject = formData.get('subject') || '';
+				const message = formData.get('message') || '';
+
+				// Try Netlify function first
+				try{
+					const res = await fetch(NETLIFY_ENDPOINT, {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({ name, email, subject, message })
+					});
+					const json = await res.json().catch(()=>null);
+					if(res.ok){
+						show(successEl, (json && json.message) ? json.message : 'Message sent — thank you!');
+						form.reset();
+					} else {
+						show(errorEl, (json && json.error) ? json.error : 'Failed to send message.');
+					}
+				} catch(err){
+					// network error — fallback to mailto
+					try {
+						const body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+						const mailto = 'mailto:leeleshilo@gmail.com'
+							+ '?subject=' + encodeURIComponent(subject || 'Contact from website')
+							+ '&body=' + encodeURIComponent(body);
+						window.location.href = mailto;
+						show(successEl, 'Email client opened. Please send the message.');
+						form.reset();
+					} catch(e){
+						show(errorEl, 'Error sending message: ' + (err && err.message ? err.message : e.message));
+					}
+				} finally {
+					// Re-enable button
+					submitBtn.value = originalText;
+					submitBtn.disabled = false;
+				}
+			});
+		});
+
+		// Ensure CV download works for all visitors
+		document.addEventListener('click', function(e) {
+			if (e.target && (e.target.textContent === 'Download CV' || e.target.closest('a[href*="CV.pdf"]'))) {
+				const link = e.target.closest('a[href*="CV.pdf"]');
+				if (link) {
+					e.preventDefault();
+					// Create a temporary link to ensure download works
+					const tempLink = document.createElement('a');
+					tempLink.href = link.href;
+					tempLink.download = link.download || 'Lerato Leshilo CV.pdf';
+					tempLink.style.display = 'none';
+					document.body.appendChild(tempLink);
+					tempLink.click();
+					document.body.removeChild(tempLink);
+				}
+			}
+		});
+	})();
+    
+  </body>
+</html>
